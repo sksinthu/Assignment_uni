@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb+srv://sksinthu15:sinthu234@cluster0.hcqfnq5.mongodb.net/gofoodmern?retryWrites=true&w=majority&appName=Cluster0"; // Ensure the database name is included in the URI
+const mongoURI = "mongodb+srv://sksinthu15:<password>@cluster0.hcqfnq5.mongodb.net/gofoodmern?retryWrites=true&w=majority&appName=Cluster0"; // Ensure the database name is included in the URI
 
 module.exports = function(callback) {
     mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
