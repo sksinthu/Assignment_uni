@@ -42,7 +42,7 @@ export default function MyOrder() {
                 <Navbar />
             </div>
 
-            <div className='container'>
+            <div className='container mt-5'>
                 <div className='row'>
 
                     {orderData !== {} ? Array(orderData).map(data => {
