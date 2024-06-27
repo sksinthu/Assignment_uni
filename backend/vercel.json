@@ -1,21 +1,23 @@
 {
-    "version": 2,
-    "builds": [
+  "version": 2,
+  "builds": [
       {
           "src": "backend/index.js",
           "use": "@vercel/node"
       }
-  ]
-  ,
+  ],
   "routes": [
-    {
-        "src": "/auth/(.*)",
-        "dest": "/backend/Routes/Auth.js"
-    },
-    {
-        "src": "/(.*)",
-        "dest": "/backend/index.js"
-    }
-]
-
-  }
+      {
+          "src": "/api/auth/(.*)",
+          "dest": "/backend/Routes/Auth.js"
+      },
+      {
+          "src": "/api/checkout/(.*)",
+          "dest": "/backend/Routes/checkout.js"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "/backend/index.js"
+      }
+  ]
+}
