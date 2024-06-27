@@ -11,10 +11,7 @@
           "src": "/api/auth/(.*)",
           "dest": "/backend/Routes/Auth.js"
       },
-      {
-          "src": "/api/checkout/(.*)",
-          "dest": "/backend/Routes/checkout.js"
-      },
+     
       {
           "src": "/(.*)",
           "dest": "/backend/index.js"
