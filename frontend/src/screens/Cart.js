@@ -165,7 +165,7 @@ export default function Cart() {
             />
           </div>
           <button type="submit" className="btn btn-success">
-            Submit Order Details
+          Place Order
           </button>
         </form>
       </div>
