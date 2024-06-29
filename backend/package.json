@@ -18,7 +18,8 @@
     "json-stringify-safe": "^5.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.2",
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.9.13",
+    "vercel": "^34.2.8"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
