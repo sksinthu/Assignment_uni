@@ -80,7 +80,7 @@ export default function Cart() {
     }
 
     let userEmail = localStorage.getItem("userEmail");
-    let response = await fetch("http://localhost:5000/api/auth/orderData", {
+    let response = await fetch("https://assignment-uni-ap.vercel.app/api/auth/orderData", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
