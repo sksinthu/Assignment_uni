@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/api/auth/(.*)",
+      "dest": "/Routes/Auth.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.js"
     }

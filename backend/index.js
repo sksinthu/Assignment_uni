@@ -1,8 +1,7 @@
-// Load environment variables from .env file
 require('dotenv').config();
-
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Use environment variables
 const mongoURI = process.env.MONGO_URI;
@@ -20,14 +19,7 @@ global.foodData = require('./db')(function call(err, data, CatData) {
 const app = express();
 
 // Middleware to handle CORS
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+app.use(cors({ origin: allowedOrigin }));
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -41,5 +33,5 @@ app.use('/api/auth', require('./Routes/Auth'));
 
 // Start server
 app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
